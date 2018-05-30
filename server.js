@@ -62,17 +62,17 @@ app.get ('/about', (req, res) => {
   });
 });
 
-app.get('/bad', (req, res) => {
-  res.send({
-    error: 'Bad',
-    message: 'This is the bad Page'
-  });
-});
-
 app.get('/projects', (req, res) => {
   res.render('projects.hbs', {
     pageTitle: 'Projects Page',
     projectPageMessage: 'Welcome to the Projects Page'
+  });
+});
+
+app.get('/bad', (req, res) => {
+  res.send({
+    error: 'Bad',
+    message: 'This is the bad Page'
   });
 });
 
