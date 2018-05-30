@@ -20,6 +20,12 @@ app.use((req, res, next) => {
   next();
 });
 
+// TODO: new page. Push to github(git push), and push to heroku (git push heroku)
+// 1) Create new url (/projects)
+// 2) Make view file (same as home (replace existing <p> with 'portfolio page here'))
+// 3) New link in partials header so we go to home/about/projects
+// 4) git Push, then git push heroku
+
 // Create new view maintenance.hbs
 // app.use((req, res, next) => {
 //   res.render('maintenance.hbs');
@@ -60,6 +66,13 @@ app.get('/bad', (req, res) => {
   res.send({
     error: 'Bad',
     message: 'This is the bad Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    projectPageMessage: 'Welcome to the Projects Page'
   });
 });
 
